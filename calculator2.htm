@@ -1,0 +1,129 @@
+<html>
+<head>
+<style>
+ .container {
+   text-align: center;
+   margin: 20 100 20 100;
+   padding: 20 20 20 20;
+ }
+  h1 {
+    width: 300px;
+    text-align: center;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+.button {
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
+    border-radius: 18px;
+    color: white;
+    padding: 15px 32px;
+    margin: 2px 2px 2px 2px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    float: left;
+}
+
+.num:hover {
+    background-color: #3e8e41;
+}
+.op {
+  background-color: white;
+  color: black;
+}
+
+.op:hover {
+  background-color: #e7e7e7;
+}
+
+.reset {
+  background-color: #367c39;
+  border: 1px solid green;
+  clear: both;
+  width: 286px;
+}
+
+.reset:hover {
+  background-color: #f44336;
+}
+#display {
+  width: 290px;
+  background-color: #cbe7cb;
+  color:  black;
+  border: 1px solid green;
+  border-radius: 4px;
+  font-family: 'Lucida Console', monospace;
+  font-size: 40px;
+  text-align: right;
+  padding: 1px 1px 1px 1px;
+  margin: 10px 0px 10px 1px;
+}
+   </style>
+</head>
+<body>
+  <div class='container'>
+    <h1><strong>CALCULATOR</strong></h1>
+    <p id='display'>0</p>
+    <div class='row'>
+      <button class="button num" value='7'>7</button>
+      <button class="button num" value='8'>8</button>
+      <button class="button num" value='9'>9</button>
+      <button class="button op" value='/'>/</button>
+    </div>
+    <div class='row' style="clear:both">
+      <button class="button num" value='4'>4</button>
+      <button class="button num" value='5'>5</button>
+      <button class="button num" value='6'>6</button>
+      <button class="button op" value='*'>x</button>
+    </div>
+    <div class='row' style="clear:both">
+      <button class="button num" value='1'>1</button>
+      <button class="button num" value='2'>2</button>
+      <button class="button num" value='3'>3</button>
+      <button class="button op" value='-'>-</button>
+    </div>
+    <div class='row' style="clear:both">
+      <button class="button op" value='.'>.</button>
+      <button class="button num" value='0'>0</button>
+      <button class="button op" value='='>=</button>
+      <button class="button op" value='+'>+</button>
+    </div>
+    <div class='row' style="clear:both">
+      <button type='reset' class='button reset' value='C'>C</button>
+    </div>
+  </div> <!-- container-->
+<script type='text/javascript' src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+  var current=0;
+  $('button').click(function(){
+  // clear display
+  if (this.value == 'C') {
+    current = 0;
+		$('#display').text('0');
+  // equals operator
+	} 
+  else if (this.value == '=') {
+    var result = eval(current);
+	 $('#display').text(result);
+  // add operator or number to input 
+	}   
+  else if (current == '0') {
+    current = this. value;
+    $('#display').text(current);
+  }
+  else {
+    current = current + this.value;
+    console.log(this.value, current);
+    $('#display').text(current);
+  }
+      
+  
+});</script>
+</body>
+</html>

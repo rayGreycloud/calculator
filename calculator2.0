@@ -1,0 +1,74 @@
+<html>
+<head>
+<style>
+  h2 {
+    width: 300px;
+    text-align: center;
+  }
+  
+.button {
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    margin: 1px 1px 1px 1px;
+    width: 75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    float: left;
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+
+#display {
+  width: 300px;
+  background-color: #cbe7cb;
+  color:  black;
+  font-family: 'Lucida Console', monospace;
+  font-size: 20px;
+  text-align: right;
+  margin: 10px 0px 20px 1px;
+}
+</style>
+</head>
+<body>
+
+<h2>Calculator</h2>
+<p id='display'>0</p>
+<div class='row'>
+<button class="button" value='7'>7</button>
+<button class="button" value='8'>8</button>
+<button class="button" value='9'>9</button>
+<button class="button" value='/'>/</button>
+</div>
+<div class='row' style="clear:both">
+<button class="button" value='4'>4</button>
+<button class="button" value='5'>5</button>
+<button class="button" value='6'>6</button>
+<button class="button" value='*'>x</button>
+</div>
+<div class='row' style="clear:both">
+<button class="button" value='1'>1</button>
+<button class="button" value='2'>2</button>
+<button class="button" value='3'>3</button>
+<button class="button" value='-'>-</button>
+</div>
+<div class='row' style="clear:both">
+<button class="button" value='.'>.</button>
+<button class="button" value='0'>0</button>
+<button class="button" value='='>=</button>
+<button class="button" value='+'>+</button>
+</div>
+
+<p style="clear:both"><br>Remember to clear floats after, or else will this p element also float next to the buttons.</p>
+<script>
+  
+</body>
+</html>
